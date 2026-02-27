@@ -1,0 +1,12 @@
+{
+  "name": "taiwan-landlord-super-simple",
+  "version": "1.0.0",
+  "description": "台灣房東系統 - 超級簡單版本",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
