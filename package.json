@@ -1,0 +1,21 @@
+{
+  "name": "taiwan-landlord-simple",
+  "version": "1.0.0",
+  "description": "台灣房東越南租客管理系統 - 超級簡單版",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": ["taiwan", "landlord", "management"],
+  "author": "地表最強的開發者",
+  "license": "MIT"
+}

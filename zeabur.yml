@@ -1,0 +1,39 @@
+# Zeabur 部署配置
+# 台灣房東系統 - 超級簡單版
+# 一次部署成功！ 💪
+
+version: "1"
+
+services:
+  # 主應用
+  app:
+    type: web-service
+    plan: hobby
+    build:
+      dockerfile: Dockerfile
+    ports:
+      - port: 3000
+        protocol: http
+    env:
+      NODE_ENV: production
+      PORT: 3000
+    healthcheck:
+      path: /api/health
+      interval: 30s
+      timeout: 5s
+      retries: 3
+    resources:
+      memory: 256MB
+      cpu: 0.25
+
+# 部署設定
+deploy:
+  strategy: rolling
+  min_healthy_instances: 1
+
+# 監控設定
+monitoring:
+  enabled: true
+  logs:
+    enabled: true
+    retention: 7d
